@@ -1,4 +1,4 @@
-name: 自动部署 SAP
+name: 自动部署 ubtu SAP
 
 on:
   workflow_dispatch:  # 只允许手动触发
@@ -223,7 +223,7 @@ jobs:
           elif [ "${{ github.event.inputs.type }}" = "高圆圆" ]; then
             echo "DOCKER_IMAGE=ghcr.io/legendmeinan/nezser:latest" >> $GITHUB_ENV
           else 
-            echo "DOCKER_IMAGE=ghcr.io/eooce/firefox:latest" >> $GITHUB_ENV
+            echo "DOCKER_IMAGE=ghcr.io/legendmeinan/ubuntu:latest" >> $GITHUB_ENV
           fi
         fi
         
