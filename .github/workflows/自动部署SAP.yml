@@ -249,7 +249,7 @@ jobs:
         cf login -a ${{ env.CF_API }} -u "${{ secrets.EMAIL }}" -p "${{ secrets.PASSWORD }}" -o "$ORG" -s "$SPACE" 
      
     - name: Deploy application
-      timeout-minutes: 1
+      timeout-minutes: 2
       run: |
         cf push ${{ env.APP_NAME }} --docker-image ${{ env.DOCKER_IMAGE }} -m 1536M -k 3096M || true
         echo "✅ Deployment process completed"
