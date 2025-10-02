@@ -6,7 +6,7 @@ on:
       region:
         description: '选择部署区域'
         required: true
-        default: 'AWS-JP(Tokyo)'
+        default: 'AWS-KR(Seoul)'
         type: choice
         options:
           #  免费区域
@@ -233,7 +233,7 @@ jobs:
 
     - name: Deploy application
       run: |
-        if cf push ${{ env.APP_NAME }} --docker-image ${{ env.DOCKER_IMAGE }} -m ${{ env.MEMORY }} -k ${{ env.DISK }} --var VNC_PASSWORD="${{ secrets.VNC_PASSWORD || '123456' }}" --health-check-type port; then
+        if cf push ${{ env.APP_NAME }} --docker-image ${{ env.DOCKER_IMAGE }} -m ${{ env.MEMORY }} -k ${{ env.DISK }} --var VNC_PASSWORD="${{ secrets.VNC_PASSWORD || 'f1234568' }}" --health-check-type port; then
           echo "Deployment successful"
         else
           #cf delete ${{ env.APP_NAME }} -f
