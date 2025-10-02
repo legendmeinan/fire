@@ -209,7 +209,7 @@ jobs:
             ;;
         esac
         
-        # 如果用户提供了应用名称，则使用用户提供的
+        # 如果用户提供了应用名称，则使用用户提供
         if [ -n "${{ github.event.inputs.app_name }}" ]; then
           echo "APP_NAME=${{ github.event.inputs.app_name }}" >> $GITHUB_ENV
         fi
