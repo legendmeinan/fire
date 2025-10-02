@@ -224,8 +224,6 @@ jobs:
             echo "DOCKER_IMAGE=ghcr.io/legendmeinan/nezser:latest" >> $GITHUB_ENV
           else 
             echo "DOCKER_IMAGE=ghcr.io/eooce/firefox:latest" >> $GITHUB_ENV
-
-这个可以了" >> $GITHUB_ENV
           fi
         fi
         
