@@ -47,12 +47,12 @@ on:
       app_name:
         description: '应用名称（可选，留空则自动生成）'
         required: false
-        default: 'Ubuntu'
+        default: ''
 
 env:
-  DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/legendmeinan/ubuntu:latest' }}
-  MEMORY: ${{ secrets.MEMORY || '3000M' }}
-  DISK: ${{ secrets.DISK || '8000M' }}
+  DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/eooce/firefox:latest' }}
+  MEMORY: ${{ secrets.MEMORY || '2048M' }}
+  DISK: ${{ secrets.DISK || '4096M' }}
 
 jobs:
   deploy-app:
