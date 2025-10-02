@@ -52,7 +52,7 @@ on:
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/legendmeinan/ubuntu:latest' }}
   MEMORY: ${{ secrets.MEMORY || '3006M' }}
-  DISK: ${{ secrets.DISK || '6048M' }}
+  DISK: ${{ secrets.DISK || '8000M' }}
 
 jobs:
   deploy-app:
