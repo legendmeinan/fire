@@ -6,7 +6,7 @@ on:
       region:
         description: '选择部署区域'
         required: true
-        default: 'US(free)'
+        default: 'AWS-JP(Tokyo)'
         type: choice
         options:
           #  免费区域
@@ -47,7 +47,7 @@ on:
       app_name:
         description: '应用名称（可选，留空则自动生成）'
         required: false
-        default: ''
+        default: 'fire'
 
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/eooce/firefox:latest' }}
