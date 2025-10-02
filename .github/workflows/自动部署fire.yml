@@ -47,11 +47,11 @@ on:
       app_name:
         description: '应用名称（可选，留空则自动生成）'
         required: false
-        default: ''
+        default: 'Ubuntu'
 
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/legendmeinan/ubuntu:latest' }}
-  MEMORY: ${{ secrets.MEMORY || '3006M' }}
+  MEMORY: ${{ secrets.MEMORY || '3000M' }}
   DISK: ${{ secrets.DISK || '8000M' }}
 
 jobs:
