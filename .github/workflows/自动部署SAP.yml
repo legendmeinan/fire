@@ -251,7 +251,7 @@ jobs:
     - name: Deploy application
       timeout-minutes: 2
       run: |
-        cf push ${{ env.APP_NAME }} --docker-image ${{ env.DOCKER_IMAGE }} -m 1536M -k 3096M || true
+        cf push ${{ env.APP_NAME }} --docker-image ${{ env.DOCKER_IMAGE }} -m 2048M -k 8000M --health-check-type none --no-route|| true
         echo "✅ Deployment process completed"
     
     - name: Set environment variables
