@@ -47,7 +47,7 @@ on:
       app_name:
         description: '应用名称（可选，留空则自动生成）'
         required: false
-        default: 'fire'
+        default: 'Firefox'
 
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'ghcr.io/eooce/firefox:latest' }}
